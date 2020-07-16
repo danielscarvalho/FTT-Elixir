@@ -1,0 +1,49 @@
+https://www.tutorialspoint.com/elixir/index.htm
+
+https://elixir-lang.org/install.html#gnulinux
+Ubuntu 14.04/16.04/17.04/18.04/19.04 or Debian 7/8/9/10
+
+Add Erlang Solutions repository: 
+wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb
+
+Run: 
+sudo apt-get update
+
+Install the Erlang/OTP platform and all of its applications: 
+sudo apt-get install esl-erlang
+
+Install Elixir: 
+sudo apt-get install elixir
+
+elixir -v
+
+iex
+
+Testar em modo interativo:
+
+.1 + .2
+10+444
+"Vai " <> "FTT!!"
+(123/10 * 5) - 0.5
+123/10 * (5 - 0.5)
+a = 10
+a * a
+m = [1, 2, 3] ++ [4, 5, 6]
+m
+m -- [5]
+true = !false
+
+defmodule Loop do
+   def print_multiple_times(msg, n) when n <= 1 do
+      IO.puts msg
+      IO.puts n
+   end
+
+   def print_multiple_times(msg, n) do
+      IO.puts "Hello"
+      IO.puts n
+      print_multiple_times(msg, n - 1)
+   end
+end
+
+Loop.print_multiple_times("Hello", 10)
